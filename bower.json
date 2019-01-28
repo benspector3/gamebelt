@@ -1,0 +1,20 @@
+{
+  "name": "gamebelt",
+  "main": "index.js",
+  "homepage": "https://github.com/benspector3/gamebelt",
+  "authors": [
+    "Ben Spector <ben@operationspark.org>"
+  ],
+  "description": "a utility library for Fundamentals of Video Game Programming",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
