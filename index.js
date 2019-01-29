@@ -1,6 +1,14 @@
 (function(window, _) {
  window.gamebelt = window.gamebelt || {
-    numz: {},
+    numz: {
+        getDistance: function(pointA, pointB) {
+            const
+                distanceX = pointB.x - pointA.x,
+                distanceY = pointB.y - pointA.y,
+                distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+            return distance;
+        }
+    },
     phyz: {
       /**
        * Returns an Object with basic properties utilized in a 
