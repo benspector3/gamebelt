@@ -8,6 +8,12 @@
                 distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
             return distance;
         },
+        degreesToRadians(degrees) {
+          return degrees * Math.PI / 180;  
+        },
+        radiansToDegrees(radians) {
+          return radians * 180 / Math.PI;  
+        },
         getAngleDegrees(pointA, pointB) {
             const
                 distanceX = pointB.x - pointA.x,
