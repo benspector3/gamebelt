@@ -39,7 +39,7 @@
                 body.rotation += body.rotationalVelocity;
             },
             /**
-             * Updates the angular velocity properties of a body,
+             * Updates the diagonal velocity properties of a body,
              * taking into account the body's current velocity 
              * and applying any forces acting against the body on
              * both the x and y axis.
@@ -54,7 +54,7 @@
              * @param {Number} forceOnY: The force acting against
              * the body on the y axis.
              */
-            updateAngularVelocity(body, forceOnX, forceOnY) {
+            updateVelocity(body, forceOnX, forceOnY) {
                 const
                     angle = body.rotation * Math.PI / 180,
                     accelerationOnX = Math.cos(angle) * forceOnX,
@@ -85,13 +85,13 @@
              * @return {Object} The body.
              */
             makeBody: function(type, {
-                velocityX = 0,
-                velocityY = 0,
-                rotationalVelocity = 0,
-                integrity = 1,
-                density = 1,
-                volatility = 0
-            } = {}) {
+                                        velocityX = 0,
+                                        velocityY = 0,
+                                        rotationalVelocity = 0,
+                                        integrity = 1,
+                                        density = 1,
+                                        volatility = 0
+                                    } = {}) {
                 if (type === undefined) throw new Error('You must provide a valid String for the type parameter!');
                 return {
                     type: type,
